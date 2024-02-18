@@ -94,6 +94,7 @@ public class ChiselingRecipeLoader {
                 namespaces = files
                     .filter(Files::isDirectory)
                     .map(p -> p.getFileName().toString())
+                    .map(name -> name.endsWith("/") ? name.substring(0, name.length() - 1) : name) // For some reason the name includes '/' for jar file systems
                     .filter(RegistryUtil::isValidNamespace)
                     .collect(Collectors.toList());
             }
