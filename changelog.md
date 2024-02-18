@@ -1,3 +1,6 @@
+### Rechiseled 1.1.5b
+- Fixed chiseling recipes not getting loaded
+
 ### Rechiseled 1.1.5a
 - Fixed hardcoded namespace in `ChiseledTextureProvider`
 
