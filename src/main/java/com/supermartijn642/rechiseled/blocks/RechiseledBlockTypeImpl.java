@@ -34,7 +34,7 @@ public class RechiseledBlockTypeImpl implements RechiseledBlockType {
         this.plankType = plankType;
     }
 
-    public Optional<BlockPlanks.EnumType> plankType(){
+    public Optional<BlockPlanks.EnumType> getPlankType(){
         return this.plankType;
     }
 
