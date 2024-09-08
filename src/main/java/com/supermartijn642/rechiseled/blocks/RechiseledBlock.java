@@ -4,6 +4,8 @@ import com.supermartijn642.core.TextComponents;
 import com.supermartijn642.core.block.BaseBlock;
 import com.supermartijn642.core.block.BlockProperties;
 import net.minecraft.block.BlockPlanks;
+import net.minecraft.block.state.BlockStateContainer;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
@@ -40,8 +42,8 @@ public class RechiseledBlock extends BaseBlock {
     }
 
     protected BlockStateContainer.Builder blockStateContainerBuilder() {
-        BlockStateContainer.Builder builder = BlockStateContainer.Builder(this);
-        if (this.plankType.isPresent()) builder.add(BlockPlanks.EnumType);
+        BlockStateContainer.Builder builder = new BlockStateContainer.Builder(this);
+        if (this.plankType.isPresent()) builder.add(BlockPlanks.VARIANT);
         return builder;
     }
 
@@ -51,7 +53,7 @@ public class RechiseledBlock extends BaseBlock {
     }
 
     public IBlockState getStateFromMeta(int meta){
-        IBlockState state = this.defaultBlockState();
+        IBlockState state = this.getDefaultState();
         if (this.plankType.isPresent()) state = state.withProperty(BlockPlanks.VARIANT, plankType.get());
         return state;
     }

@@ -20,7 +20,7 @@ public class RechiseledBlockTypeImpl implements RechiseledBlockType {
     private final boolean hasRegularVariant, hasConnectingVariant;
     private final Supplier<Block> regularBlock, connectingBlock;
     private final Supplier<ItemBlock> regularItem, connectingItem;
-    private final Option<BlockPlanks.EnumType> plankType;
+    private final Optional<BlockPlanks.EnumType> plankType;
 
     public RechiseledBlockTypeImpl(ResourceLocation identifier, BlockSpecification specification, boolean hasRegularVariant, boolean hasConnectingVariant, Supplier<Block> regularBlock, Supplier<Block> connectingBlock, Supplier<ItemBlock> regularItem, Supplier<ItemBlock> connectingItem, Optional<BlockPlanks.EnumType> plankType){
         this.identifier = identifier;
