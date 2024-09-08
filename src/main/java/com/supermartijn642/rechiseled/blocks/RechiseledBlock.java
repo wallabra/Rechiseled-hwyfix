@@ -43,7 +43,7 @@ public class RechiseledBlock extends BaseBlock {
 
     protected BlockStateContainer.Builder blockStateContainerBuilder() {
         BlockStateContainer.Builder builder = new BlockStateContainer.Builder(this);
-        if (this.plankType.isPresent()) builder.add(BlockPlanks.VARIANT);
+        if (this.plankType != null && this.plankType.isPresent()) builder.add(BlockPlanks.VARIANT);
         return builder;
     }
 
@@ -54,7 +54,7 @@ public class RechiseledBlock extends BaseBlock {
 
     public IBlockState getStateFromMeta(int meta){
         IBlockState state = this.getDefaultState();
-        if (this.plankType.isPresent()) state = state.withProperty(BlockPlanks.VARIANT, plankType.get());
+        if (this.plankType != null && this.plankType.isPresent()) state = state.withProperty(BlockPlanks.VARIANT, plankType.get());
         return state;
     }
     
