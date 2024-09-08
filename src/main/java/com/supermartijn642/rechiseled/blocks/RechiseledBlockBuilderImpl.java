@@ -70,7 +70,7 @@ public class RechiseledBlockBuilderImpl implements RechiseledBlockBuilder {
     public RechiseledBlockBuilderImpl withPlankType(BlockPlanks.EnumType newPlankType) {
         if(this.completed)
             throw new RuntimeException("Builder has already been build!");
-        this.plankType = newPlankType;
+        this.plankType = Optional.of(newPlankType);
         return this;
     }
 

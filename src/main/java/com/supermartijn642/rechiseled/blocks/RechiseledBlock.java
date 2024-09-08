@@ -19,7 +19,7 @@ import java.util.function.Consumer;
 public class RechiseledBlock extends BaseBlock {
 
     public final boolean connecting;
-    public final Optional<BlockPlanks.EnumType> plankType = Optional.empty();
+    public final Optional<BlockPlanks.EnumType> plankType;
 
     public RechiseledBlock(boolean connecting, BlockProperties properties, Optional<BlockPlanks.EnumType> plankType){
         super(false, properties);
@@ -36,6 +36,7 @@ public class RechiseledBlock extends BaseBlock {
     public RechiseledBlock(boolean connecting, BlockProperties properties){
         super(false, properties);
         this.connecting = connecting;
+        this.plankType = Optional.empty();
     }
 
     protected BlockStateContainer.Builder blockStateContainerBuilder() {

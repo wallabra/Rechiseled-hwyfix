@@ -3,6 +3,7 @@ package com.supermartijn642.rechiseled.api.blocks;
 import com.supermartijn642.core.block.BlockProperties;
 import com.supermartijn642.rechiseled.api.registration.RechiseledRegistration;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.ResourceLocation;
 
