@@ -110,7 +110,7 @@ minecraft {
 
 tasks.register('processSources', Sync) {
     from sourceSets.main.java
-    into layout.buildDirectory.dir("/sources")
+    into layout.buildDirectory.dir("./genSources")
     inputs.property 'version', version
 
     // Replace mod properties in main mod class

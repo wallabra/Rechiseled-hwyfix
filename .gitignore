@@ -3,6 +3,7 @@
 build/
 out/
 classes/
+genSources/
 
 # eclipse
 bin/
