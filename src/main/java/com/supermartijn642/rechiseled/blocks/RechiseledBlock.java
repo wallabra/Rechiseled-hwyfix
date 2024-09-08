@@ -52,7 +52,7 @@ public class RechiseledBlock extends BaseBlock {
 
     public IBlockState getStateFromMeta(int meta){
         IBlockState state = this.defaultBlockState();
-        if (this.plankType.isPresent()) state = state.setValue(BlockPlanks.EnumType, plankType.get());
+        if (this.plankType.isPresent()) state = state.withProperty(BlockPlanks.VARIANT, plankType.get());
         return state;
     }
     
