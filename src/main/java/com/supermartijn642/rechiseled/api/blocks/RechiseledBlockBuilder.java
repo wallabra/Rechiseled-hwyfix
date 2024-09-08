@@ -45,7 +45,7 @@ public interface RechiseledBlockBuilder {
     /**
      * Sets the plank type for applicable blocks
      */
-    RechiseledBlockBuilder withPlankType(BlockPlanks.EnumType newPlankType)
+    RechiseledBlockBuilder withPlankType(BlockPlanks.EnumType newPlankType);
     
     /**
      * Indicates that this block does not have a non-connecting variant
