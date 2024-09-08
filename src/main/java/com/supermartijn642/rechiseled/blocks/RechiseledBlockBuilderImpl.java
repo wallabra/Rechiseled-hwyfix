@@ -13,10 +13,12 @@ import com.supermartijn642.rechiseled.api.blocks.RechiseledBlockBuilder;
 import com.supermartijn642.rechiseled.api.blocks.RechiseledBlockType;
 import com.supermartijn642.rechiseled.registration.RechiseledRegistrationImpl;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 
+import java.util.Optional;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -32,6 +34,7 @@ public class RechiseledBlockBuilderImpl implements RechiseledBlockBuilder {
     private final String identifier;
     private Supplier<BlockProperties> properties;
     private BlockSpecification specification = BlockSpecification.BASIC;
+    private Optional<BlockPlanks.EnumType> plankType = Optional.empty();
     private boolean hasRegularVariant = true;
     private boolean hasConnectingVariant = true;
     public Supplier<Block> customRegularVariant;
@@ -60,6 +63,14 @@ public class RechiseledBlockBuilderImpl implements RechiseledBlockBuilder {
         if(this.completed)
             throw new RuntimeException("Builder has already been build!");
         this.properties = () -> properties;
+        return this;
+    }
+
+    @Override
+    public RechiseledBlockBuilderImpl withPlankType(BlockPlanks.EnumType newPlankType) {
+        if(this.completed)
+            throw new RuntimeException("Builder has already been build!");
+        this.plankType = newPlankType;
         return this;
     }
 
@@ -267,7 +278,8 @@ public class RechiseledBlockBuilderImpl implements RechiseledBlockBuilder {
             this.hasRegularVariant ? regularBlockHolder::get : null,
             this.hasConnectingVariant ? connectingBlockHolder::get : null,
             this.hasRegularVariant ? regularItemHolder::get : null,
-            this.hasConnectingVariant ? connectingItemHolder::get : null
+            this.hasConnectingVariant ? connectingItemHolder::get : null,
+            this.plankType
         );
         this.registration.finalizeBuilder(this, blockType);
         return blockType;

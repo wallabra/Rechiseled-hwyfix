@@ -43,6 +43,11 @@ public interface RechiseledBlockBuilder {
     RechiseledBlockBuilder specification(BlockSpecification specification);
 
     /**
+     * Sets the plank type for applicable blocks
+     */
+    RechiseledBlockBuilder withPlankType(BlockPlanks.EnumType newPlankType)
+    
+    /**
      * Indicates that this block does not have a non-connecting variant
      */
     RechiseledBlockBuilder noRegularVariant();

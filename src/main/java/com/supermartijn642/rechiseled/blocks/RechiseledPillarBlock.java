@@ -26,7 +26,7 @@ public class RechiseledPillarBlock extends RechiseledBlock {
 
     @Override
     public IBlockState getStateForPlacement(World level, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand){
-        return this.getDefaultState().withProperty(AXIS_PROPERTY, side.getAxis());
+        return super.getStateForPlacement(level, pos, side, hitX, hitY, hitZ, meta, placer, hand).withProperty(AXIS_PROPERTY, side.getAxis());
     }
 
     @Override
@@ -39,15 +39,14 @@ public class RechiseledPillarBlock extends RechiseledBlock {
         return state;
     }
 
-    @Override
-    protected BlockStateContainer createBlockState(){
-        return new BlockStateContainer(this, AXIS_PROPERTY);
+    protected BlockStateContainer.Builder blockStateContainerBuilder() {
+        return super.blockStateContainerBuilder().add(AXIS_PROPERTY);
     }
 
     public IBlockState getStateFromMeta(int meta){
         EnumFacing.Axis axis = (meta & 4) == 4 ? EnumFacing.Axis.X
             : (meta & 8) == 8 ? EnumFacing.Axis.Z : EnumFacing.Axis.Y;
-        return this.getDefaultState().withProperty(AXIS_PROPERTY, axis);
+        return super.getStateFromMeta(meta).withProperty(AXIS_PROPERTY, axis);
     }
 
     public int getMetaFromState(IBlockState state){

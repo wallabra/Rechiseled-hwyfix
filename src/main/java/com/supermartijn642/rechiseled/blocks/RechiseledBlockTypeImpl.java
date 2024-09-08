@@ -3,9 +3,11 @@ package com.supermartijn642.rechiseled.blocks;
 import com.supermartijn642.rechiseled.api.blocks.BlockSpecification;
 import com.supermartijn642.rechiseled.api.blocks.RechiseledBlockType;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 
+import java.util.Optional;
 import java.util.function.Supplier;
 
 /**
@@ -18,8 +20,9 @@ public class RechiseledBlockTypeImpl implements RechiseledBlockType {
     private final boolean hasRegularVariant, hasConnectingVariant;
     private final Supplier<Block> regularBlock, connectingBlock;
     private final Supplier<ItemBlock> regularItem, connectingItem;
+    private final Option<BlockPlanks.EnumType> plankType;
 
-    public RechiseledBlockTypeImpl(ResourceLocation identifier, BlockSpecification specification, boolean hasRegularVariant, boolean hasConnectingVariant, Supplier<Block> regularBlock, Supplier<Block> connectingBlock, Supplier<ItemBlock> regularItem, Supplier<ItemBlock> connectingItem){
+    public RechiseledBlockTypeImpl(ResourceLocation identifier, BlockSpecification specification, boolean hasRegularVariant, boolean hasConnectingVariant, Supplier<Block> regularBlock, Supplier<Block> connectingBlock, Supplier<ItemBlock> regularItem, Supplier<ItemBlock> connectingItem, Optional<BlockPlanks.EnumType> plankType){
         this.identifier = identifier;
         this.specification = specification;
         this.hasRegularVariant = hasRegularVariant;
@@ -28,6 +31,11 @@ public class RechiseledBlockTypeImpl implements RechiseledBlockType {
         this.connectingBlock = connectingBlock;
         this.regularItem = regularItem;
         this.connectingItem = connectingItem;
+        this.plankType = plankType;
+    }
+
+    public Optional<BlockPlanks.EnumType> plankType(){
+        return this.plankType;
     }
 
     public ResourceLocation getIdentifier(){

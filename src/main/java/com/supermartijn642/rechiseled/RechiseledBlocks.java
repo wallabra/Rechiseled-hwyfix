@@ -5,6 +5,7 @@ import com.supermartijn642.rechiseled.api.blocks.BlockSpecification;
 import com.supermartijn642.rechiseled.api.blocks.RechiseledBlockBuilder;
 import com.supermartijn642.rechiseled.api.blocks.RechiseledBlockType;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.init.Blocks;
 
 import java.util.function.Supplier;
@@ -16,25 +17,25 @@ import java.util.function.Supplier;
 public class RechiseledBlocks {
 
     // Acacia planks
-    public static final RechiseledBlockType ACACIA_PLANKS_BEAMS = create("acacia_planks_beams", "Acacia Plank Beams", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_BRICK_PATTERN = create("acacia_planks_brick_pattern", "Acacia Plank Brick Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_BRICK_PAVING = create("acacia_planks_brick_paving", "Acacia Plank Brick Paving", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_BRICKS = create("acacia_planks_bricks", "Acacia Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_CRATE = create("acacia_planks_crate", "Acacia Planks Crate", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_DIAGONAL_STRIPES = create("acacia_planks_diagonal_stripes", "Diagonal Acacia Plank Stripes", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_DIAGONAL_TILES = create("acacia_planks_diagonal_tiles", "Diagonal Acacia Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_DOTTED = create("acacia_planks_dotted", "Dotted Acacia Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_FLOORING = create("acacia_planks_flooring", "Acacia Plank Flooring", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_LARGE_TILES = create("acacia_planks_large_tiles", "Large Acacia Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_MOSAIC = create("acacia_planks_mosaic", "Acacia Plank Mosaic", () -> Blocks.PLANKS).noConnectingVariant().recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_PATTERN = create("acacia_planks_pattern", "Acacia Plank Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_ROTATED_BRICKS = create("acacia_planks_rotated_bricks", "Rotated Acacia Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_SMALL_BRICKS = create("acacia_planks_small_bricks", "Small Acacia Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_SMALL_TILES = create("acacia_planks_small_tiles", "Small Acacia Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_SQUARES = create("acacia_planks_squares", "Acacia Plank Squares", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_TILES = create("acacia_planks_tiles", "Acacia Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_WAVY = create("acacia_planks_wavy", "Wavy Acacia Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
-    public static final RechiseledBlockType ACACIA_PLANKS_WOVEN = create("acacia_planks_woven", "Woven Acacia Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_BEAMS = create("acacia_planks_beams", "Acacia Plank Beams", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_BRICK_PATTERN = create("acacia_planks_brick_pattern", "Acacia Plank Brick Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_BRICK_PAVING = create("acacia_planks_brick_paving", "Acacia Plank Brick Paving", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_BRICKS = create("acacia_planks_bricks", "Acacia Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_CRATE = create("acacia_planks_crate", "Acacia Planks Crate", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_DIAGONAL_STRIPES = create("acacia_planks_diagonal_stripes", "Diagonal Acacia Plank Stripes", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_DIAGONAL_TILES = create("acacia_planks_diagonal_tiles", "Diagonal Acacia Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_DOTTED = create("acacia_planks_dotted", "Dotted Acacia Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_FLOORING = create("acacia_planks_flooring", "Acacia Plank Flooring", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_LARGE_TILES = create("acacia_planks_large_tiles", "Large Acacia Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_MOSAIC = create("acacia_planks_mosaic", "Acacia Plank Mosaic", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).noConnectingVariant().recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_PATTERN = create("acacia_planks_pattern", "Acacia Plank Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_ROTATED_BRICKS = create("acacia_planks_rotated_bricks", "Rotated Acacia Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_SMALL_BRICKS = create("acacia_planks_small_bricks", "Small Acacia Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_SMALL_TILES = create("acacia_planks_small_tiles", "Small Acacia Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_SQUARES = create("acacia_planks_squares", "Acacia Plank Squares", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_TILES = create("acacia_planks_tiles", "Acacia Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_WAVY = create("acacia_planks_wavy", "Wavy Acacia Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
+    public static final RechiseledBlockType ACACIA_PLANKS_WOVEN = create("acacia_planks_woven", "Woven Acacia Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.ACACIA).recipe(BaseChiselingRecipes.ACACIA_PLANKS).build();
     // Andesite
     public static final RechiseledBlockType ANDESITE_BRICK_PATTERN = create("andesite_brick_pattern", "Andesite Brick Pattern", () -> Blocks.STONE).recipe(BaseChiselingRecipes.ANDESITE).build();
     public static final RechiseledBlockType ANDESITE_BRICK_PAVING = create("andesite_brick_paving", "Andesite Brick Paving", () -> Blocks.STONE).recipe(BaseChiselingRecipes.ANDESITE).build();
@@ -48,25 +49,25 @@ public class RechiseledBlocks {
     public static final RechiseledBlockType ANDESITE_TILES = create("andesite_tiles", "Andesite Tiles", () -> Blocks.STONE).recipe(BaseChiselingRecipes.ANDESITE).build();
     public static final RechiseledBlockType ANDESITE_WAVY = create("andesite_wavy", "Wavy Andesite", () -> Blocks.STONE).recipe(BaseChiselingRecipes.ANDESITE).build();
     // Birch planks
-    public static final RechiseledBlockType BIRCH_PLANKS_BEAMS = create("birch_planks_beams", "Birch Plank Beams", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_BRICK_PATTERN = create("birch_planks_brick_pattern", "Birch Plank Brick Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_BRICK_PAVING = create("birch_planks_brick_paving", "Birch Plank Brick Paving", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_BRICKS = create("birch_planks_bricks", "Birch Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_CRATE = create("birch_planks_crate", "Birch Planks Crate", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_DIAGONAL_STRIPES = create("birch_planks_diagonal_stripes", "Diagonal Birch Plank Stripes", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_DIAGONAL_TILES = create("birch_planks_diagonal_tiles", "Diagonal Birch Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_DOTTED = create("birch_planks_dotted", "Dotted Birch Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_FLOORING = create("birch_planks_flooring", "Birch Plank Flooring", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_LARGE_TILES = create("birch_planks_large_tiles", "Large Birch Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_MOSAIC = create("birch_planks_mosaic", "Birch Plank Mosaic", () -> Blocks.PLANKS).noConnectingVariant().recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_PATTERN = create("birch_planks_pattern", "Birch Plank Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_ROTATED_BRICKS = create("birch_planks_rotated_bricks", "Rotated Birch Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_SMALL_BRICKS = create("birch_planks_small_bricks", "Small Birch Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_SMALL_TILES = create("birch_planks_small_tiles", "Small Birch Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_SQUARES = create("birch_planks_squares", "Birch Plank Squares", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_TILES = create("birch_planks_tiles", "Birch Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_WAVY = create("birch_planks_wavy", "Wavy Birch Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
-    public static final RechiseledBlockType BIRCH_PLANKS_WOVEN = create("birch_planks_woven", "Woven Birch Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_BEAMS = create("birch_planks_beams", "Birch Plank Beams", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_BRICK_PATTERN = create("birch_planks_brick_pattern", "Birch Plank Brick Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_BRICK_PAVING = create("birch_planks_brick_paving", "Birch Plank Brick Paving", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_BRICKS = create("birch_planks_bricks", "Birch Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_CRATE = create("birch_planks_crate", "Birch Planks Crate", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_DIAGONAL_STRIPES = create("birch_planks_diagonal_stripes", "Diagonal Birch Plank Stripes", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_DIAGONAL_TILES = create("birch_planks_diagonal_tiles", "Diagonal Birch Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_DOTTED = create("birch_planks_dotted", "Dotted Birch Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_FLOORING = create("birch_planks_flooring", "Birch Plank Flooring", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_LARGE_TILES = create("birch_planks_large_tiles", "Large Birch Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_MOSAIC = create("birch_planks_mosaic", "Birch Plank Mosaic", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).noConnectingVariant().recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_PATTERN = create("birch_planks_pattern", "Birch Plank Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_ROTATED_BRICKS = create("birch_planks_rotated_bricks", "Rotated Birch Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_SMALL_BRICKS = create("birch_planks_small_bricks", "Small Birch Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_SMALL_TILES = create("birch_planks_small_tiles", "Small Birch Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_SQUARES = create("birch_planks_squares", "Birch Plank Squares", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_TILES = create("birch_planks_tiles", "Birch Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_WAVY = create("birch_planks_wavy", "Wavy Birch Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
+    public static final RechiseledBlockType BIRCH_PLANKS_WOVEN = create("birch_planks_woven", "Woven Birch Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.BIRCH).recipe(BaseChiselingRecipes.BIRCH_PLANKS).build();
     // Bone block
     public static final RechiseledBlockType BONE_BLOCK_BORDERED = create("bone_block_bordered", "Bordered Bone Block", () -> Blocks.BONE_BLOCK).recipe(BaseChiselingRecipes.BONE_BLOCK).build();
     public static final RechiseledBlockType BONE_BLOCK_BUNDLED = create("bone_block_bundled", "Bundled Bone Block", () -> Blocks.BONE_BLOCK).noConnectingVariant().recipe(BaseChiselingRecipes.BONE_BLOCK).build();
@@ -114,25 +115,25 @@ public class RechiseledBlocks {
     public static final RechiseledBlockType COBBLESTONE_TILES = create("cobblestone_tiles", "Cobblestone Tiles", () -> Blocks.COBBLESTONE).recipe(BaseChiselingRecipes.COBBLESTONE).build();
     public static final RechiseledBlockType COBBLESTONE_WORN_STRIPES = create("cobblestone_worn_stripes", "Weathered Cobblestone Stripes", () -> Blocks.COBBLESTONE).recipe(BaseChiselingRecipes.COBBLESTONE).build();
     // Dark oak planks
-    public static final RechiseledBlockType DARK_OAK_PLANKS_BEAMS = create("dark_oak_planks_beams", "Dark Oak Plank Beams", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_BRICK_PATTERN = create("dark_oak_planks_brick_pattern", "Dark Oak Plank Brick Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_BRICK_PAVING = create("dark_oak_planks_brick_paving", "Dark Oak Plank Brick Paving", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_BRICKS = create("dark_oak_planks_bricks", "Dark Oak Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_CRATE = create("dark_oak_planks_crate", "Dark Oak Planks Crate", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_DIAGONAL_STRIPES = create("dark_oak_planks_diagonal_stripes", "Diagonal Dark Oak Plank Stripes", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_DIAGONAL_TILES = create("dark_oak_planks_diagonal_tiles", "Diagonal Dark Oak Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_DOTTED = create("dark_oak_planks_dotted", "Dotted Dark Oak Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_FLOORING = create("dark_oak_planks_flooring", "Dark Oak Plank Flooring", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_LARGE_TILES = create("dark_oak_planks_large_tiles", "Large Dark Oak Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_MOSAIC = create("dark_oak_planks_mosaic", "Dark Oak Plank Mosaic", () -> Blocks.PLANKS).noConnectingVariant().recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_PATTERN = create("dark_oak_planks_pattern", "Dark Oak Plank Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_ROTATED_BRICKS = create("dark_oak_planks_rotated_bricks", "Rotated Dark Oak Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_SMALL_BRICKS = create("dark_oak_planks_small_bricks", "Small Dark Oak Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_SMALL_TILES = create("dark_oak_planks_small_tiles", "Small Dark Oak Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_SQUARES = create("dark_oak_planks_squares", "Dark Oak Plank Squares", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_TILES = create("dark_oak_planks_tiles", "Dark Oak Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_WAVY = create("dark_oak_planks_wavy", "Wavy Dark Oak Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
-    public static final RechiseledBlockType DARK_OAK_PLANKS_WOVEN = create("dark_oak_planks_woven", "Woven Dark Oak Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_BEAMS = create("dark_oak_planks_beams", "Dark Oak Plank Beams", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_BRICK_PATTERN = create("dark_oak_planks_brick_pattern", "Dark Oak Plank Brick Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_BRICK_PAVING = create("dark_oak_planks_brick_paving", "Dark Oak Plank Brick Paving", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_BRICKS = create("dark_oak_planks_bricks", "Dark Oak Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_CRATE = create("dark_oak_planks_crate", "Dark Oak Planks Crate", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_DIAGONAL_STRIPES = create("dark_oak_planks_diagonal_stripes", "Diagonal Dark Oak Plank Stripes", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_DIAGONAL_TILES = create("dark_oak_planks_diagonal_tiles", "Diagonal Dark Oak Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_DOTTED = create("dark_oak_planks_dotted", "Dotted Dark Oak Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_FLOORING = create("dark_oak_planks_flooring", "Dark Oak Plank Flooring", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_LARGE_TILES = create("dark_oak_planks_large_tiles", "Large Dark Oak Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_MOSAIC = create("dark_oak_planks_mosaic", "Dark Oak Plank Mosaic", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).noConnectingVariant().recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_PATTERN = create("dark_oak_planks_pattern", "Dark Oak Plank Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_ROTATED_BRICKS = create("dark_oak_planks_rotated_bricks", "Rotated Dark Oak Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_SMALL_BRICKS = create("dark_oak_planks_small_bricks", "Small Dark Oak Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_SMALL_TILES = create("dark_oak_planks_small_tiles", "Small Dark Oak Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_SQUARES = create("dark_oak_planks_squares", "Dark Oak Plank Squares", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_TILES = create("dark_oak_planks_tiles", "Dark Oak Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_WAVY = create("dark_oak_planks_wavy", "Wavy Dark Oak Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
+    public static final RechiseledBlockType DARK_OAK_PLANKS_WOVEN = create("dark_oak_planks_woven", "Woven Dark Oak Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.DARK_OAK).recipe(BaseChiselingRecipes.DARK_OAK_PLANKS).build();
     // Dark prismarine
     public static final RechiseledBlockType DARK_PRISMARINE_BEAMS = create("dark_prismarine_beams", "Dark Prismarine Beams", () -> Blocks.PRISMARINE).recipe(BaseChiselingRecipes.DARK_PRISMARINE).build();
     public static final RechiseledBlockType DARK_PRISMARINE_BRICK_PAVING = create("dark_prismarine_brick_paving", "Dark Prismarine Brick Paving", () -> Blocks.PRISMARINE).recipe(BaseChiselingRecipes.DARK_PRISMARINE).build();
@@ -270,25 +271,25 @@ public class RechiseledBlocks {
     public static final RechiseledBlockType IRON_BLOCK_SMALL_BRICKS = create("iron_block_small_bricks", "Small Iron Block Tiles", () -> Blocks.IRON_BLOCK).recipe(BaseChiselingRecipes.IRON_BLOCK).build();
     public static final RechiseledBlockType IRON_BLOCK_SMOOTH = create("iron_block_smooth", "Smooth Block of Iron", () -> Blocks.IRON_BLOCK).noConnectingVariant().recipe(BaseChiselingRecipes.IRON_BLOCK).build();
     // Jungle planks
-    public static final RechiseledBlockType JUNGLE_PLANKS_BEAMS = create("jungle_planks_beams", "Jungle Plank Beams", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_BRICK_PATTERN = create("jungle_planks_brick_pattern", "Jungle Plank Brick Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_BRICK_PAVING = create("jungle_planks_brick_paving", "Jungle Plank Brick Paving", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_BRICKS = create("jungle_planks_bricks", "Jungle Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_CRATE = create("jungle_planks_crate", "Jungle Planks Crate", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_DIAGONAL_STRIPES = create("jungle_planks_diagonal_stripes", "Diagonal Jungle Plank Stripes", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_DIAGONAL_TILES = create("jungle_planks_diagonal_tiles", "Diagonal Jungle Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_DOTTED = create("jungle_planks_dotted", "Dotted Jungle Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_FLOORING = create("jungle_planks_flooring", "Jungle Plank Flooring", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_LARGE_TILES = create("jungle_planks_large_tiles", "Large Jungle Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_MOSAIC = create("jungle_planks_mosaic", "Jungle Plank Mosaic", () -> Blocks.PLANKS).noConnectingVariant().recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_PATTERN = create("jungle_planks_pattern", "Jungle Plank Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_ROTATED_BRICKS = create("jungle_planks_rotated_bricks", "Rotated Jungle Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_SMALL_BRICKS = create("jungle_planks_small_bricks", "Small Jungle Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_SMALL_TILES = create("jungle_planks_small_tiles", "Small Jungle Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_SQUARES = create("jungle_planks_squares", "Jungle Plank Squares", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_TILES = create("jungle_planks_tiles", "Jungle Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_WAVY = create("jungle_planks_wavy", "Wavy Jungle Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
-    public static final RechiseledBlockType JUNGLE_PLANKS_WOVEN = create("jungle_planks_woven", "Woven Jungle Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_BEAMS = create("jungle_planks_beams", "Jungle Plank Beams", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_BRICK_PATTERN = create("jungle_planks_brick_pattern", "Jungle Plank Brick Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_BRICK_PAVING = create("jungle_planks_brick_paving", "Jungle Plank Brick Paving", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_BRICKS = create("jungle_planks_bricks", "Jungle Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_CRATE = create("jungle_planks_crate", "Jungle Planks Crate", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_DIAGONAL_STRIPES = create("jungle_planks_diagonal_stripes", "Diagonal Jungle Plank Stripes", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_DIAGONAL_TILES = create("jungle_planks_diagonal_tiles", "Diagonal Jungle Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_DOTTED = create("jungle_planks_dotted", "Dotted Jungle Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_FLOORING = create("jungle_planks_flooring", "Jungle Plank Flooring", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_LARGE_TILES = create("jungle_planks_large_tiles", "Large Jungle Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_MOSAIC = create("jungle_planks_mosaic", "Jungle Plank Mosaic", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).noConnectingVariant().recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_PATTERN = create("jungle_planks_pattern", "Jungle Plank Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_ROTATED_BRICKS = create("jungle_planks_rotated_bricks", "Rotated Jungle Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_SMALL_BRICKS = create("jungle_planks_small_bricks", "Small Jungle Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_SMALL_TILES = create("jungle_planks_small_tiles", "Small Jungle Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_SQUARES = create("jungle_planks_squares", "Jungle Plank Squares", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_TILES = create("jungle_planks_tiles", "Jungle Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_WAVY = create("jungle_planks_wavy", "Wavy Jungle Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
+    public static final RechiseledBlockType JUNGLE_PLANKS_WOVEN = create("jungle_planks_woven", "Woven Jungle Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.JUNGLE).recipe(BaseChiselingRecipes.JUNGLE_PLANKS).build();
     // Lapis block
     public static final RechiseledBlockType LAPIS_BLOCK_BORDERED = create("lapis_block_bordered", "Bordered Block of Lapis Lazuli", () -> Blocks.LAPIS_BLOCK).recipe(BaseChiselingRecipes.LAPIS_BLOCK).build();
     public static final RechiseledBlockType LAPIS_BLOCK_CHISELED = create("lapis_block_chiseled", "Chiseled Block of Lapis Lazuli", () -> Blocks.LAPIS_BLOCK).recipe(BaseChiselingRecipes.LAPIS_BLOCK).build();
@@ -341,25 +342,25 @@ public class RechiseledBlocks {
     public static final RechiseledBlockType NETHER_BRICKS_SQUARES = create("nether_bricks_squares", "Nether Brick Squares", () -> Blocks.NETHER_BRICK).recipe(BaseChiselingRecipes.NETHER_BRICKS).build();
     public static final RechiseledBlockType NETHER_BRICKS_TILES = create("nether_bricks_tiles", "Nether Brick Tiles", () -> Blocks.NETHER_BRICK).recipe(BaseChiselingRecipes.NETHER_BRICKS).build();
     // Oak planks
-    public static final RechiseledBlockType OAK_PLANKS_BEAMS = create("oak_planks_beams", "Oak Plank Beams", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_BRICK_PATTERN = create("oak_planks_brick_pattern", "Oak Plank Brick Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_BRICK_PAVING = create("oak_planks_brick_paving", "Oak Plank Brick Paving", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_BRICKS = create("oak_planks_bricks", "Oak Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_CRATE = create("oak_planks_crate", "Oak Planks Crate", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_DIAGONAL_STRIPES = create("oak_planks_diagonal_stripes", "Diagonal Oak Plank Stripes", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_DIAGONAL_TILES = create("oak_planks_diagonal_tiles", "Diagonal Oak Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_DOTTED = create("oak_planks_dotted", "Dotted Oak Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_FLOORING = create("oak_planks_flooring", "Oak Plank Flooring", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_LARGE_TILES = create("oak_planks_large_tiles", "Large Oak Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_MOSAIC = create("oak_planks_mosaic", "Oak Plank Mosaic", () -> Blocks.PLANKS).noConnectingVariant().recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_PATTERN = create("oak_planks_pattern", "Oak Plank Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_ROTATED_BRICKS = create("oak_planks_rotated_bricks", "Rotated Oak Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_SMALL_BRICKS = create("oak_planks_small_bricks", "Small Oak Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_SMALL_TILES = create("oak_planks_small_tiles", "Small Oak Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_SQUARES = create("oak_planks_squares", "Oak Plank Squares", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_TILES = create("oak_planks_tiles", "Oak Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_WAVY = create("oak_planks_wavy", "Wavy Oak Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
-    public static final RechiseledBlockType OAK_PLANKS_WOVEN = create("oak_planks_woven", "Woven Oak Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_BEAMS = create("oak_planks_beams", "Oak Plank Beams", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_BRICK_PATTERN = create("oak_planks_brick_pattern", "Oak Plank Brick Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_BRICK_PAVING = create("oak_planks_brick_paving", "Oak Plank Brick Paving", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_BRICKS = create("oak_planks_bricks", "Oak Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_CRATE = create("oak_planks_crate", "Oak Planks Crate", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_DIAGONAL_STRIPES = create("oak_planks_diagonal_stripes", "Diagonal Oak Plank Stripes", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_DIAGONAL_TILES = create("oak_planks_diagonal_tiles", "Diagonal Oak Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_DOTTED = create("oak_planks_dotted", "Dotted Oak Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_FLOORING = create("oak_planks_flooring", "Oak Plank Flooring", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_LARGE_TILES = create("oak_planks_large_tiles", "Large Oak Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_MOSAIC = create("oak_planks_mosaic", "Oak Plank Mosaic", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).noConnectingVariant().recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_PATTERN = create("oak_planks_pattern", "Oak Plank Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_ROTATED_BRICKS = create("oak_planks_rotated_bricks", "Rotated Oak Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_SMALL_BRICKS = create("oak_planks_small_bricks", "Small Oak Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_SMALL_TILES = create("oak_planks_small_tiles", "Small Oak Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_SQUARES = create("oak_planks_squares", "Oak Plank Squares", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_TILES = create("oak_planks_tiles", "Oak Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_WAVY = create("oak_planks_wavy", "Wavy Oak Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
+    public static final RechiseledBlockType OAK_PLANKS_WOVEN = create("oak_planks_woven", "Woven Oak Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.OAK).recipe(BaseChiselingRecipes.OAK_PLANKS).build();
     // Obsidian
     public static final RechiseledBlockType OBSIDIAN_BORDERED = create("obsidian_bordered", "Bordered Obsidian", () -> Blocks.OBSIDIAN).recipe(BaseChiselingRecipes.OBSIDIAN).build();
     public static final RechiseledBlockType OBSIDIAN_BRICK_PATTERN = create("obsidian_brick_pattern", "Obsidian Brick Pattern", () -> Blocks.OBSIDIAN).recipe(BaseChiselingRecipes.OBSIDIAN).build();
@@ -479,25 +480,25 @@ public class RechiseledBlocks {
     public static final RechiseledBlockType SANDSTONE_ROTATED_BRICKS = create("sandstone_rotated_bricks", "Rotated Sandstone Bricks", () -> Blocks.SANDSTONE).recipe(BaseChiselingRecipes.SANDSTONE).build();
     public static final RechiseledBlockType SANDSTONE_TILES = create("sandstone_tiles", "Sandstone Tiles", () -> Blocks.SANDSTONE).recipe(BaseChiselingRecipes.SANDSTONE).build();
     // Spruce planks
-    public static final RechiseledBlockType SPRUCE_PLANKS_BEAMS = create("spruce_planks_beams", "Spruce Plank Beams", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_BRICK_PATTERN = create("spruce_planks_brick_pattern", "Spruce Plank Brick Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_BRICK_PAVING = create("spruce_planks_brick_paving", "Spruce Plank Brick Paving", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_BRICKS = create("spruce_planks_bricks", "Spruce Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_CRATE = create("spruce_planks_crate", "Spruce Planks Crate", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_DIAGONAL_STRIPES = create("spruce_planks_diagonal_stripes", "Diagonal Spruce Plank Stripes", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_DIAGONAL_TILES = create("spruce_planks_diagonal_tiles", "Diagonal Spruce Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_DOTTED = create("spruce_planks_dotted", "Dotted Spruce Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_FLOORING = create("spruce_planks_flooring", "Spruce Plank Flooring", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_LARGE_TILES = create("spruce_planks_large_tiles", "Large Spruce Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_MOSAIC = create("spruce_planks_mosaic", "Spruce Plank Mosaic", () -> Blocks.PLANKS).noConnectingVariant().recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_PATTERN = create("spruce_planks_pattern", "Spruce Plank Pattern", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_ROTATED_BRICKS = create("spruce_planks_rotated_bricks", "Rotated Spruce Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_SMALL_BRICKS = create("spruce_planks_small_bricks", "Small Spruce Plank Bricks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_SMALL_TILES = create("spruce_planks_small_tiles", "Small Spruce Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_SQUARES = create("spruce_planks_squares", "Spruce Plank Squares", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_TILES = create("spruce_planks_tiles", "Spruce Plank Tiles", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_WAVY = create("spruce_planks_wavy", "Wavy Spruce Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
-    public static final RechiseledBlockType SPRUCE_PLANKS_WOVEN = create("spruce_planks_woven", "Woven Spruce Planks", () -> Blocks.PLANKS).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_BEAMS = create("spruce_planks_beams", "Spruce Plank Beams", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_BRICK_PATTERN = create("spruce_planks_brick_pattern", "Spruce Plank Brick Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_BRICK_PAVING = create("spruce_planks_brick_paving", "Spruce Plank Brick Paving", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_BRICKS = create("spruce_planks_bricks", "Spruce Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_CRATE = create("spruce_planks_crate", "Spruce Planks Crate", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_DIAGONAL_STRIPES = create("spruce_planks_diagonal_stripes", "Diagonal Spruce Plank Stripes", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_DIAGONAL_TILES = create("spruce_planks_diagonal_tiles", "Diagonal Spruce Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_DOTTED = create("spruce_planks_dotted", "Dotted Spruce Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_FLOORING = create("spruce_planks_flooring", "Spruce Plank Flooring", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_LARGE_TILES = create("spruce_planks_large_tiles", "Large Spruce Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_MOSAIC = create("spruce_planks_mosaic", "Spruce Plank Mosaic", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).noConnectingVariant().recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_PATTERN = create("spruce_planks_pattern", "Spruce Plank Pattern", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_ROTATED_BRICKS = create("spruce_planks_rotated_bricks", "Rotated Spruce Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_SMALL_BRICKS = create("spruce_planks_small_bricks", "Small Spruce Plank Bricks", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_SMALL_TILES = create("spruce_planks_small_tiles", "Small Spruce Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_SQUARES = create("spruce_planks_squares", "Spruce Plank Squares", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_TILES = create("spruce_planks_tiles", "Spruce Plank Tiles", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_WAVY = create("spruce_planks_wavy", "Wavy Spruce Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
+    public static final RechiseledBlockType SPRUCE_PLANKS_WOVEN = create("spruce_planks_woven", "Woven Spruce Planks", () -> Blocks.PLANKS, BlockPlanks.EnumType.SPRUCE).recipe(BaseChiselingRecipes.SPRUCE_PLANKS).build();
     // Stone
     public static final RechiseledBlockType STONE_BIG_TILES = create("stone_big_tiles", "Large Stone Tiles", () -> Blocks.STONE).recipe(BaseChiselingRecipes.STONE).build();
     public static final RechiseledBlockType STONE_BORDERED = create("stone_bordered", "Bordered Stone", () -> Blocks.STONE).recipe(BaseChiselingRecipes.STONE).build();
@@ -527,6 +528,10 @@ public class RechiseledBlocks {
 
     private static RechiseledBlockBuilder create(String identifier, String translation, Supplier<Block> parent){
         return Rechiseled.REGISTRATION.block(identifier).translation(translation).copyProperties(parent).miningTagsFrom(parent);
+    }
+    
+    private static RechiseledBlockBuilder create(String identifier, String translation, Supplier<Block> parent, BlockPlanks.EnumType plankType){
+        return Rechiseled.REGISTRATION.block(identifier).translation(translation).copyProperties(parent).miningTagsFrom(parent).withPlankType(plankType);
     }
 
     public static void init(){
