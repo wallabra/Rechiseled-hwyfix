@@ -287,13 +287,13 @@ public class RechiseledBlockBuilderImpl implements RechiseledBlockBuilder {
 
     private RechiseledBlock createBlock(boolean connecting, BlockProperties properties){
         if(this.specification == BlockSpecification.BASIC)
-            return new RechiseledBlock(connecting, properties);
+            return new RechiseledBlock(connecting, properties, this.plankType);
         if(this.specification == BlockSpecification.PILLAR)
-            return new RechiseledPillarBlock(connecting, properties);
+            return new RechiseledPillarBlock(connecting, properties, this.plankType);
         if(this.specification == BlockSpecification.GLASS)
-            return new RechiseledGlassBlock(connecting, properties);
+            return new RechiseledGlassBlock(connecting, properties, this.plankType);
         if(this.specification == BlockSpecification.GLASS_PILLAR)
-            return new RechiseledGlassPillarBlock(connecting, properties);
+            return new RechiseledGlassPillarBlock(connecting, properties, this.plankType);
         throw new IllegalStateException("Unknown specification: " + this.specification);
     }
 }

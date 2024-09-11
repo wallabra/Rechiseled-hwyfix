@@ -1,6 +1,10 @@
 package com.supermartijn642.rechiseled.blocks;
 
+import java.util.Optional;
+
 import com.supermartijn642.core.block.BlockProperties;
+
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
@@ -18,6 +22,16 @@ import net.minecraft.world.World;
 public class RechiseledPillarBlock extends RechiseledBlock {
 
     public static final PropertyEnum<EnumFacing.Axis> AXIS_PROPERTY = BlockRotatedPillar.AXIS;
+
+    public RechiseledPillarBlock(boolean connecting, BlockProperties properties, Optional<BlockPlanks.EnumType> plankType){
+        super(connecting, properties, plankType);
+        this.setDefaultState(this.getDefaultState().withProperty(AXIS_PROPERTY, EnumFacing.Axis.Y));
+    }
+
+    public RechiseledPillarBlock(boolean connecting, BlockProperties properties, BlockPlanks.EnumType plankType){
+        super(connecting, properties, plankType);
+        this.setDefaultState(this.getDefaultState().withProperty(AXIS_PROPERTY, EnumFacing.Axis.Y));
+    }
 
     public RechiseledPillarBlock(boolean connecting, BlockProperties properties){
         super(connecting, properties);
